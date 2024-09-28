@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="shortcut icon" href="/1.png" type="image/x-icon">
+    <title>Simple whatsApp link generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="logo">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="head-text">
+                whatsApp Link generator
+            </div>
+        </div>
+        <!-- form container INPUT -->
+        <div class="form-container">
+        <form class="input-form active" action="" id="link-shortner-form">
+            <input type="number" name="" id="link-shortner-input" class="link-input" placeholder="enter phone number">
+            <button type="submit">Enter</button>
+        </form>  
+
+
+
+        <form action="" id="custom-link-shortner-form" class="custom-form">
+            <input type="number" name="" id="custom-link-shortner-number" class="link-input" placeholder="enter phone number">
+            <textarea id="custom-link-shortner-text" class="link-input" placeholder="enter custom message"></textarea>
+            <button type="submit">Enter</button>
+        </form> 
+
+        </div>
+
+
+        <p class="help-text">
+            PS: Phone number to start with the international prefix, e.g +1, +234, +44, +233 etc, (without the plus)
+        </p>
+        <div class="sharebtn">
+            <p class="share">Share</p>
+            <span> <i class="fa-regular fa-share-from-square"></i></span>
+        </div>
+  
+        <span class="custom-btn">Add custom message?</span>
+        <p class="watermark">Made by LankyJo</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

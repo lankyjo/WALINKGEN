@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: jakarta;
+    src: url(/plus-jakarta-sans-v8-latin-500.woff2);
+}
+body{
+    display: grid;
+    place-items: center;
+    background: #1a1a1a;
+    height: 100vh;
+    font-family: jakarta;
+    /* overflow: hidden; */
+}
+.container{
+    width: 100vw;
+    text-align: center;
+    padding-bottom: .5rem;
+}
+.form-container{
+    /* max-width: 400px; */
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 800px;
+    max-width: 90vw;
+    margin-inline: auto;
+    box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.3), 0 0 30px 25px rgba(0, 255, 0, 0.1);
+}
+.input-form{
+    display: flex;
+    width: 100%;
+    background: #fff;
+    /* padding: 20px; */
+    height: 50px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    display: none;
+}
+.custom-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    display: none;
+}
+.input-form input{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    padding-inline: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.input-form button{
+    padding-inline: 2.5rem;
+    border: none;
+    outline: none;
+    background: green;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#custom-link-shortner-form .link-input{
+    padding-inline: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#custom-link-shortner-form .link-input:nth-child(2){
+    height: 80px;
+    padding-top: 10px;
+    resize: none;
+}
+#custom-link-shortner-form .link-input:nth-child(2)::placeholder{
+    font-family: jakarta;
+    font-weight: 100;
+    font-size: 12px;
+}
+#custom-link-shortner-form button{
+    padding-inline: 2.5rem;
+    border: none;
+    outline: none;
+    background: green;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+.link-area{
+    background: #fff;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.link{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+.link h3{
+    width: 70%;
+    height: 25px;
+    overflow: hidden;
+}
+.link .tooltip{
+        visibility: hidden;
+        width: 120px;
+        background-color: green;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 10%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+}
+.link .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: green transparent transparent transparent;
+  }
+  .link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+.link-area p{
+    font-size: 11px;
+    margin-bottom: 10px;
+    color: gray;
+}
+.link span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    color: green;
+}
+.head{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+.head .logo{
+    font-size: 10rem;
+    color: green;
+    filter: drop-shadow( 0 0 20px rgba(0, 255, 0, 0.5));
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.help-text{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding-top: 2rem;
+}
+.custom-btn{
+    color: white;
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 14px;
+    cursor: pointer;
+    /* margin-bottom: 5rem; */
+}
+
+.sharebtn{
+    text-align: center;
+    margin: 4rem 0 0 ;
+    display: inline-flex;
+    color: #fff;
+    gap: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    background: green;
+}
+
+.active{
+    display: flex;
+}
+
+.custom-btn, .head-text, .sharebtn, .head-text{
+    user-select: none;
+}
+.watermark{
+    text-align: left;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+@media screen and (max-width: 480px) {
+    .link h3{
+        font-size: 15px;
+    }
+    .watermark{
+        font-size: 12px;
+    }
+}
